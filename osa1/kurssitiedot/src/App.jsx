@@ -8,7 +8,7 @@ console.log(props)
 return <h1>{props.course}</h1>
 }
 
-
+// Content komponentti, joka ottaa vastaan propsin ja renderöi osan nimen ja tehtävien määrän
 const Content = (props) => {
   console.log(props)
   return (
@@ -20,7 +20,7 @@ const Content = (props) => {
   )
 }
 
-
+// Total komponentti, joka ottaa vastaan propsin ja renderöi tehtävien kokonaismäärän
 const Total = (props) => {
   console.log(props)
   return <p>Number of exercises {props.parts[0].exercises + 
@@ -31,7 +31,7 @@ const Total = (props) => {
 
 
 
-//App komponentti, joka sisältää Header, Content ja Total komponentit.
+//App pääkomponentti, jossa const course sisältää nimen ja harjoitusten määrän
 const App = () => {
   const course = {
     name: 'Half Stack application development',
@@ -51,6 +51,7 @@ const App = () => {
   ]
   }
 
+  // return, renderöi Header, Content ja Total komponentit.
   return (
     <div>
       <Header course={course.name} />
