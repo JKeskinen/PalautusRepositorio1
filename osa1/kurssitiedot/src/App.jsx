@@ -1,11 +1,14 @@
 const Header = (props) => {
+console.log(props)
 return <h1>{props.course}</h1>
 }
 const Content = (props) => {
+  console.log(props)
   return <p>{props.part} {props.exercises} </p>
 
 }
 const Total = (props) => {
+  console.log(props)
   return <p>Number of exercises {props.exercises1 + props.exercises2 + props.exercises3}</p>
 }
 
