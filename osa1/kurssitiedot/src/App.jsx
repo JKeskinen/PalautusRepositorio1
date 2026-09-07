@@ -4,13 +4,13 @@
 //Total komponentti, joka ottaa vastaan propsin ja renderöi tehtävien kokonaismäärän
 
 const Header = (props) => {
-console.log(props)
+console.log('Propsin arvo on',props)
 return <h1>{props.course}</h1>
 }
 
 // Content komponentti, joka ottaa vastaan propsin ja renderöi osan nimen ja tehtävien määrän
 const Content = (props) => {
-  console.log(props)
+  console.log('Propsin arvo on',props)
   return (
   <div>
     <p>{props.parts[0].name} {props.parts[0].exercises}</p>
@@ -22,7 +22,7 @@ const Content = (props) => {
 
 // Total komponentti, joka ottaa vastaan propsin ja renderöi tehtävien kokonaismäärän
 const Total = (props) => {
-  console.log(props)
+  console.log('Propsin arvo on',props)
   return <p>Number of exercises {props.parts[0].exercises + 
     props.parts[1].exercises + props.parts[2].exercises}</p>
 }
